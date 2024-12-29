@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.12189ebf.css",
+    "main.js": "/static/js/main.57cdd532.js",
+    "static/js/488.273886f3.chunk.js": "/static/js/488.273886f3.chunk.js",
+    "static/media/torus1.jpg": "/static/media/torus1.3fa64e1ac907a42e8932.jpg",
+    "index.html": "/index.html",
+    "main.12189ebf.css.map": "/static/css/main.12189ebf.css.map",
+    "main.57cdd532.js.map": "/static/js/main.57cdd532.js.map",
+    "488.273886f3.chunk.js.map": "/static/js/488.273886f3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.12189ebf.css",
+    "static/js/main.57cdd532.js"
+  ]
+}
