@@ -70,6 +70,21 @@ body {
   object-fit: cover; /* Ensures images cover their allocated space */
 }
 
+.image-container {
+  width: 300px; /* Full width or any fixed width you prefer */
+  aspect-ratio: 2738 / 1614; /* Maintain the aspect ratio */
+  overflow: hidden; /* Ensures any excess part of the image is hidden */
+  position: relative; /* For proper positioning of the image */
+}
+
+.image-container img {
+  width: 100%; /* Ensure the image fills the container width */
+  height: 100%; /* Ensure the image fills the container height */
+  object-fit: cover; /* Crop the image to fill the container */
+  position: absolute; /* Position for proper cropping */
+}
+
+
 hr {
   border: none;
   border-top: 2px solid green;
@@ -92,5 +107,12 @@ hr {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+a {
+  color: inherit; /* Keeps the link the same color as the surrounding text */
+  text-decoration: none; /* Optional: Removes underline */
+}
 
+a:visited {
+  color: inherit; /* Ensures visited links match the initial color */
+}
 
