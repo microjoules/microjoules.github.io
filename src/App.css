@@ -8,8 +8,10 @@ body {
 .header {
   display: flex;
   justify-content: flex-start; /* Align left */
-  align-items: center;
+  align-items: center; /* Center vertically */
+  padding: 0; /* Remove any additional padding */
   gap: 450px; /* Space between name and project-info */
+  margin: 0; /* Remove any margin */
 }
 
 .name, .project-info {
@@ -17,6 +19,8 @@ body {
   font-weight: 300;
   font-size: 2rem;
   color: #006F00; /* Dark green color */
+  margin: 0; /* Remove additional space around text */
+  line-height: 1.5; /* Adjust line height for tighter spacing */
 }
 
 .project-row {
@@ -89,7 +93,7 @@ hr {
   border: none;
   border-top: 2px solid green;
   width: 80%;
-  margin: 20px auto;
+  margin: 10px auto;
 }
 
 .App-logo {

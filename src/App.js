@@ -3,6 +3,9 @@ import './App.css';
 import torus1 from './images/torus1.jpg'; // Import the image
 import ddr from './images/ddr.jpg'; // Import the image
 import raymarch from './images/raymarching.jpg'; // Import the image
+import plane from './images/plane.jpg';
+import fans from './images/fans.jpg';
+import shape from './images/shape.jpg';
 
 function App() {
   const projects = [
@@ -11,22 +14,22 @@ function App() {
       description: `A knot is a closed, non-intersecting curve in space. Visualizing these curves
        on a torus confines the problem to a smaller region of 3D space. The T(p,q) torus knot wraps 
        q times around the inner circle and p times around the torus’s axis of symmetry.`,
-      images: [torus1],
+      images: [torus1, plane],
       link: 'https://microjoules.github.io/knots/'
     },
     {
       name: 'DDR GAME',
       description: ` A simple Dance Dance Revolution game. Features a rotating disco ball, 
       and a humble crowd dancing in the background. `,
-      images: [ddr],
+      images: [ddr, fans],
       link: 'https://microjoules.github.io/ddr/'
     },
     {
       name: 'RAY MARCHING',
-      description: ` Implemented using RayMarching and Signed Distance Field (SDF) functions. Each shape is defined using an SDF and is 
+      description: ` Implemented using Ray Marching and Signed Distance Function (SDF). Each shape is defined using an SDF and is 
       combined using their additive intersection. A smoothing min function is then employed to make the 
       intersection of shapes smooth. Raymarching is responsible for rendering the correct objects onto the screen.`,
-      images: [raymarch],
+      images: [raymarch, shape],
       link: 'https://microjoules.github.io/raymarching/'
     }
   ];
@@ -36,7 +39,7 @@ function App() {
       {/* Header */}
       <div className="App">
         <header className="header">
-          <h1 className="name">JULIA REES</h1>
+          <h1 className="name">   &nbsp;JULIA &nbsp; REES</h1>
           <h2 className="project-info">PROJECTS</h2>
         </header>
       </div>
@@ -59,7 +62,7 @@ function App() {
             <div className="project-row" style={{
               display: 'flex',       // Ensures elements are in a row
               alignItems: 'flex-start',
-              gap: '40px',
+              gap: '60px',
               marginTop: '10px',
               flexWrap: 'nowrap', // Prevent wrapping; force a single row
             }}>
