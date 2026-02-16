@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import torus1 from './images/torus1.jpg'; // Import the image
-import ddr from './images/ddr.jpg'; // Import the image
-import raymarch from './images/raymarching.jpg'; // Import the image
+import torus1 from './images/torus1.jpg';
+import ddr from './images/ddr.jpg';
+import raymarch from './images/raymarching.jpg';
 import plane from './images/plane.jpg';
 import fans from './images/fans.jpg';
 import shape from './images/shape.jpg';
+import caterpillarFull from './images/caterpillar-full.png';
+import caterpillarTwo from './images/caterpillar-2.png';
+import meImage from './images/ele.jpeg';
+import artstationIcon from './images/artstation.svg';
+import linkedinIcon from './images/linkedin.svg';
+import mailIcon from './images/mail.svg';
 
 function App() {
+  const [activeTab, setActiveTab] = useState('bio');
+
   const projects = [
     {
       name: 'TORUS KNOTS',
@@ -34,106 +42,137 @@ function App() {
     }
   ];
 
-  return (
-    <div style={{ padding: '20px' }}>
-      {/* Header */}
-      <div className="App">
-        <header className="header">
-          <h1 className="name">   &nbsp;JULIA &nbsp; REES</h1>
-          <h2 className="project-info">PROJECTS</h2>
-        </header>
-      </div>
+  const artProjects = [
+    {
+      name: 'CATERPILLAR BUS',
+      description:
+        "A 3D recreation based off of Denis Pakowacz's playful illustration for my first final project at Think Tank.",
+      images: [caterpillarFull, caterpillarTwo],
+      link: 'https://www.artstation.com/artwork/2BE00g'
+    }
+  ];
 
+  const socialLinks = [
+    { label: 'ArtStation', href: 'https://www.artstation.com/microjoules', iconSrc: artstationIcon },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/julia-rees-880267196/', iconSrc: linkedinIcon },
+    { label: 'Email', href: 'mailto:julialaurenrees@gmail.com', iconSrc: mailIcon }
+  ];
 
+  const renderProjectSection = (projectList) => (
+    <section className="projects-section">
+      {projectList.map((project, index) => (
+        <div key={project.name}>
+          <a
+            href={project.link}
+            className="project-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="project-row">
+              <div className="project-name">{project.name}</div>
 
-      {/* Horizontal Line */}
-      <hr style={{
-        border: 'none',
-        borderTop: '2px solid green',
-        width: '99%',
-        margin: '0 auto 20px'
-      }} />
+              <div className="project-description">{project.description}</div>
 
-      {/* Project Rows */}
-      {projects.map((project, index) => (
-        <div key={index} style={{ marginBottom: '20px' }}>
-          <a href={project.link} style={{ textDecoration: 'none' }}>
-            {/* Project Row with flexbox */}
-            <div className="project-row" style={{
-              display: 'flex',       // Ensures elements are in a row
-              alignItems: 'flex-start',
-              gap: '60px',
-              marginTop: '10px',
-              flexWrap: 'nowrap', // Prevent wrapping; force a single row
-            }}>
-              {/* Project Name (20% width) */}
-              <div style={{
-                width: '20%', // 20% width for project name
-                fontSize: '2rem',
-                fontFamily: 'Arial, sans-serif',
-                fontWeight: '300',
-                wordWrap: 'break-word',  // Ensure text wraps if it's long
-              }}>
-                {project.name}
-              </div>
-
-              {/* Project Description (20% width) */}
-              <div style={{
-                width: '20%',  // 20% width for project description
-                fontSize: '1rem',
-                fontFamily: 'Arial, sans-serif',
-                fontWeight: '300',
-                wordWrap: 'break-word',
-                textAlign: 'justify',
-                whiteSpace: 'normal',
-              }}>
-                {project.description}
-              </div>
-
-              {/* Project Images (Remaining space for images) */}
-              <div className="project-images" style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                gap: '30px',
-                width: '60%',  // The images take the remaining space
-                justifyContent: 'flex-start',
-              }}>
-                {/* {project.images.map((image, idx) => (
-                  <img key={idx} src={image} alt={`Project ${index + 1}`} style={{
-                    width: '300px',
-                    height: 'auto',
-                    //borderRadius: '5px',
-                    objectFit: 'cover',  // Makes sure the images cover their space properly
-                    marginBottom: '10px',
-                  }} />
-                  
-                ))} */}
+              <div className="project-images">
                 {project.images.map((image, idx) => (
                   <div key={idx} className="image-container">
-                    <img src={image} alt={`Project ${index + 1}`} />
+                    <img src={image} alt={`${project.name} preview ${idx + 1}`} />
                   </div>
                 ))}
               </div>
             </div>
-
-            {/* Horizontal Line */}
-            {index < projects.length && (
-              <hr style={{
-                border: 'none',
-                borderTop: '2px solid green',
-                width: '100%',
-                margin: '20px auto'
-              }} />
-            )}
           </a>
+
+          {index < projectList.length - 1 && <hr className="section-divider" />}
         </div>
       ))}
+    </section>
+  );
+
+  return (
+    <div className="page">
+      <header className="header">
+        <h1 className="name">JULIA REES</h1>
+        <nav className="tabs" aria-label="Main sections">
+          <button
+            type="button"
+            className={`tab-button ${activeTab === 'bio' ? 'active' : ''}`}
+            onClick={() => setActiveTab('bio')}
+          >
+            HOME
+          </button>
+          <button
+            type="button"
+            className={`tab-button ${activeTab === 'art' ? 'active' : ''}`}
+            onClick={() => setActiveTab('art')}
+          >
+            ART
+          </button>
+          <button
+            type="button"
+            className={`tab-button ${activeTab === 'projects' ? 'active' : ''}`}
+            onClick={() => setActiveTab('projects')}
+          >
+            CODING
+          </button>
+        </nav>
+      </header>
+
+      <hr className="section-divider" />
+
+      {activeTab === 'bio' ? (
+        <section className="bio-section">
+          <div className="bio-layout">
+            <div className="bio-copy">
+              <p>
+                Hi! I'm Juju
+              </p>
+              <p>
+                Im at think tank now but have a degree from ubc (math major btw)
+              </p>
+              <p>
+                give me job
+              </p>
+
+            </div>
+
+            <div className="bio-image-panel">
+              <img src={meImage} alt="Julia Rees portrait" />
+              <div className="social-icons" aria-label="Social links">
+                {socialLinks.map((link) => {
+                  const externalProps = link.href.startsWith('http')
+                    ? { target: '_blank', rel: 'noopener noreferrer' }
+                    : {};
+
+                  return (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      className="social-icon-link"
+                      aria-label={link.label}
+                      {...externalProps}
+                    >
+                      <img
+                        src={link.iconSrc}
+                        className={`social-icon-image ${link.label === 'Email' ? 'social-icon-image-mail' : ''}`}
+                        alt=""
+                        aria-hidden="true"
+                      />
+                      <span className="sr-only">{link.label}</span>
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : activeTab === 'projects' ? (
+        renderProjectSection(projects)
+      ) : (
+        renderProjectSection(artProjects)
+      )}
     </div>
   );
 }
 
 export default App;
-
-
-
-

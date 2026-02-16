@@ -16,8 +16,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:dev": "PUBLIC_URL=/dev react-scripts build",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "predeploy:dev": "yarn build:dev",
+    "deploy:dev": "gh-pages -d build --dest dev"
   },
   "eslintConfig": {
     "extends": [
