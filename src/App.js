@@ -125,13 +125,7 @@ function App() {
           <div className="bio-layout">
             <div className="bio-copy">
               <p>
-                Hi! I'm Juju
-              </p>
-              <p>
-                Im at think tank now but have a degree from ubc (math major btw)
-              </p>
-              <p>
-                give me job
+                Hi! Thanks for stopping by!
               </p>
 
             </div>
