@@ -1,21 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.55858442.css",
-    "main.js": "/static/js/main.ac9528ff.js",
+    "main.css": "/static/css/main.6f06604c.css",
+    "main.js": "/static/js/main.473dbeed.js",
     "static/js/488.273886f3.chunk.js": "/static/js/488.273886f3.chunk.js",
+    "static/media/caterpillar-full.png": "/static/media/caterpillar-full.d740d8bdffc45cd226df.png",
+    "static/media/caterpillar-2.png": "/static/media/caterpillar-2.09afe0a47c6aea307136.png",
     "static/media/ddr.jpg": "/static/media/ddr.ba21ee1f95eb177ff327.jpg",
     "static/media/torus1.jpg": "/static/media/torus1.3fa64e1ac907a42e8932.jpg",
     "static/media/shape.jpg": "/static/media/shape.f8afd5b4a13e2f0bd735.jpg",
+    "static/media/ele.jpeg": "/static/media/ele.976d60cc777a7455bdc0.jpeg",
     "static/media/raymarching.jpg": "/static/media/raymarching.e05b27fdab0f08c8f145.jpg",
     "static/media/fans.jpg": "/static/media/fans.aed0de91763a85c40419.jpg",
     "static/media/plane.jpg": "/static/media/plane.04d2906b74168d93b04b.jpg",
+    "static/media/mail.svg": "/static/media/mail.1796d75f8fa6b23c9f798899326aed67.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.33a7fe085bc5b2a7e44494ab37dfb9a5.svg",
     "index.html": "/index.html",
-    "main.55858442.css.map": "/static/css/main.55858442.css.map",
-    "main.ac9528ff.js.map": "/static/js/main.ac9528ff.js.map",
+    "static/media/artstation.svg": "/static/media/artstation.87d152994d5d789d1728c33c3ff32baa.svg",
+    "main.6f06604c.css.map": "/static/css/main.6f06604c.css.map",
+    "main.473dbeed.js.map": "/static/js/main.473dbeed.js.map",
     "488.273886f3.chunk.js.map": "/static/js/488.273886f3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.55858442.css",
-    "static/js/main.ac9528ff.js"
+    "static/css/main.6f06604c.css",
+    "static/js/main.473dbeed.js"
   ]
 }
