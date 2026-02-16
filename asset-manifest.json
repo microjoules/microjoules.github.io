@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6f06604c.css",
-    "main.js": "/static/js/main.473dbeed.js",
+    "main.js": "/static/js/main.7de4b974.js",
     "static/js/488.273886f3.chunk.js": "/static/js/488.273886f3.chunk.js",
     "static/media/caterpillar-full.png": "/static/media/caterpillar-full.d740d8bdffc45cd226df.png",
     "static/media/caterpillar-2.png": "/static/media/caterpillar-2.09afe0a47c6aea307136.png",
@@ -17,11 +17,11 @@
     "index.html": "/index.html",
     "static/media/artstation.svg": "/static/media/artstation.87d152994d5d789d1728c33c3ff32baa.svg",
     "main.6f06604c.css.map": "/static/css/main.6f06604c.css.map",
-    "main.473dbeed.js.map": "/static/js/main.473dbeed.js.map",
+    "main.7de4b974.js.map": "/static/js/main.7de4b974.js.map",
     "488.273886f3.chunk.js.map": "/static/js/488.273886f3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6f06604c.css",
-    "static/js/main.473dbeed.js"
+    "static/js/main.7de4b974.js"
   ]
 }
