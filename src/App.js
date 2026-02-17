@@ -54,7 +54,7 @@ function App() {
 
   const socialLinks = [
     { label: 'ArtStation', href: 'https://www.artstation.com/microjoules', iconSrc: artstationIcon },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/julia-rees-880267196/', iconSrc: linkedinIcon },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/microjoules/', iconSrc: linkedinIcon },
     { label: 'Email', href: 'mailto:julialaurenrees@gmail.com', iconSrc: mailIcon }
   ];
 
@@ -65,6 +65,7 @@ function App() {
           <a
             href={project.link}
             className="project-link"
+            title="Click for more"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -89,8 +90,14 @@ function App() {
     </section>
   );
 
+  const renderEtcSection = () => (
+    <section className="etc-section">
+      <p>Coming soon...</p>
+    </section>
+  );
+
   return (
-    <div className="page">
+    <div className={`page ${activeTab === 'etc' ? 'etc-active' : ''}`}>
       <header className="header">
         <h1 className="name">JULIA REES</h1>
         <nav className="tabs" aria-label="Main sections">
@@ -115,6 +122,13 @@ function App() {
           >
             CODING
           </button>
+          <button
+            type="button"
+            className={`tab-button ${activeTab === 'etc' ? 'active' : ''}`}
+            onClick={() => setActiveTab('etc')}
+          >
+            ETC
+          </button>
         </nav>
       </header>
 
@@ -125,7 +139,7 @@ function App() {
           <div className="bio-layout">
             <div className="bio-copy">
               <p>
-                Hi! Thanks for stopping by!
+                Hi! Im Julia. Recent mathematics graduate, recent Think Tank student. I like learning new stuff, and Zootopia. Thanks for looking (: 
               </p>
 
             </div>
@@ -162,6 +176,8 @@ function App() {
         </section>
       ) : activeTab === 'projects' ? (
         renderProjectSection(projects)
+      ) : activeTab === 'etc' ? (
+        renderEtcSection()
       ) : (
         renderProjectSection(artProjects)
       )}

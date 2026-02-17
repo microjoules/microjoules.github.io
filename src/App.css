@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'JuliaNameFont';
+  src: url('./fonts/Anja Eliane accent002.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background-color: #f5f5dc;
   margin: 0;
@@ -18,17 +25,34 @@ a:visited {
   padding: 20px;
 }
 
+.page.etc-active {
+  background-color: #fffdf6;
+  background-image:
+    radial-gradient(circle at 44px 44px, rgba(255, 179, 186, 0.6) 0 15px, transparent 16px),
+    radial-gradient(circle at 132px 44px, rgba(255, 223, 186, 0.6) 0 15px, transparent 16px),
+    radial-gradient(circle at 220px 44px, rgba(255, 255, 186, 0.6) 0 15px, transparent 16px),
+    radial-gradient(circle at 88px 112px, rgba(186, 255, 201, 0.6) 0 15px, transparent 16px),
+    radial-gradient(circle at 176px 112px, rgba(186, 225, 255, 0.6) 0 15px, transparent 16px),
+    radial-gradient(circle at 278px 112px, rgba(224, 187, 228, 0.6) 0 15px, transparent 16px);
+  background-size: 308px 156px;
+  background-repeat: repeat;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
 .header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 32px;
 }
 
 .name {
+  font-family: 'JuliaNameFont', Arial, sans-serif;
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 2.6rem;
+  line-height: 1;
   color: #006f00;
   margin: 0;
 }
@@ -37,16 +61,23 @@ a:visited {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .tab-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 2px solid #006f00;
   background: transparent;
   color: #006f00;
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.03em;
-  padding: 8px 14px;
+  padding: 8px 18px;
+  min-height: 44px;
+  line-height: 1;
+  border-radius: 999px;
   cursor: pointer;
 }
 
@@ -68,6 +99,11 @@ a:visited {
   color: #006f00;
   font-size: 1.5rem;
   font-weight: 400;
+}
+
+.etc-section {
+  color: #1a1a1a;
+  font-size: 1.05rem;
 }
 
 .bio-section {
@@ -94,6 +130,7 @@ a:visited {
 
 .bio-copy p {
   margin: 0 0 14px;
+  font-size: 1.25rem;
 }
 
 .bio-image-panel {
@@ -241,7 +278,7 @@ a:visited {
   }
 
   .name {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   .project-name {
